@@ -1,0 +1,59 @@
+unit price  5.00, quantity 10, name John , find amount to be paid which is unitPrice * quantity 
+write a test class
+
+Class Customers {
+	private String name;
+	private float unitPrice;
+	private int quantity;
+
+	// default  constructor 
+	public Customers() {
+
+}
+
+// parameterized constructor 
+public Customers(string name, float unitPrice, int quantity) {
+	this.name = name;
+	this.unitPrice = unitPrice;
+	this.quantity = quantity;
+}
+
+// setter
+public void setName(string name){
+	this.name = name;
+}
+
+// getter 
+public string getName() {
+	return this.name;
+}
+
+	public float getAmountToBePaid() {
+		return this.unitPrice * this.quantity;
+}
+
+}
+
+class Test {
+	public static void main(String[] args) {
+		ArrayList<Customers> arr = new ArrayList<Customers>();
+		Customers cust1 = new Customers(“John”, 5.00, 10);
+Customers cust2= new Customers(“xyz”, 4.00, 10);
+
+		System.out.println(cust.getAmountToBePaid());
+	System.out.println(cust.getName());
+	// add customers into array
+	arr.add(cust1);
+	arr.add(cust2);
+
+	// find sum
+float sum = 0;
+for (int i=0; i<arr.size(); i++) {
+	sum += arr.get(i).getAmountToBePaid();
+}
+
+
+
+}
+
+}
