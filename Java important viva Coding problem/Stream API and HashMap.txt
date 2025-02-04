@@ -1,0 +1,32 @@
+package OOP;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class test {
+    public static void main(String[] args) {
+        List<Employee> empList=new ArrayList<>();
+        empList.add(new Employee("ID1","Anol","HR",40));
+        empList.add(new Employee("ID2","Anol","UY",40));
+        empList.add(new Employee("ID3","Neil","Accounts",10));
+        
+         Map<String,Long> EmpCount= empList.stream().collect(Collectors.groupingBy(Employee :: getName,Collectors.counting()));
+         System.out.println(EmpCount);
+         
+         Map<String, Integer> map=new HashMap<>();
+         for( Employee e: empList)
+         {
+             if (!map.containsKey(e.getName()))
+                     {
+                         map.put(e.getName(),1);
+                     }
+             else
+                 map.put(e.getName(),map.get(e.getName())+1);
+         }
+         System.out.println(map);
+         
+    }
+    
+}
